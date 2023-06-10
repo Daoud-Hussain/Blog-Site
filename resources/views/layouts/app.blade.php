@@ -13,9 +13,40 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
     </head>
+    <style>
+        .theme {
+            /* background-color: #311b92; */
+            color: #fff;
+            /* background: linear-gradient(to right, #870000, #190a05); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            /* background: #870000; fallback for old browsers */
+  /* background: -webkit-linear-gradient(to bottom, #870000, #190a05); Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #870000, #190a05); 
+            }
+        
+        .form-wrapper {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            color: #000;
+        }
+        .form-control, .form-wrapper{
+            border: 1px solid #870000;
+        }
+    #button{
+        background-color: #1565c0;
+        color: #fff;
+    }
+    </style>
+
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen theme">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
