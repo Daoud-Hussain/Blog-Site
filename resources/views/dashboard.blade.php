@@ -27,7 +27,7 @@
                                 <td >{{$post->body}}</td>
                                 <td>
                                 <a href="{{url('/post/edit', $post->id) }}"><button type="button" class="btn btn-primary">Edit</button></a>
-                                <a href="{{url('/post/edit', $post->id)}} "><button type="button" class="btn btn-danger">Delete</button></a>
+                                <a href="{{url('/post/delete', $post->id)}} "><button type="button" class="btn btn-danger">Delete</button></a>
                                 </td>
                             </tr>
                            

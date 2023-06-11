@@ -56,6 +56,7 @@ class PostController extends Controller
      */
     public function destroy(int $id)
     {
-        //
+        Post::destroy($id);
+        return redirect(route('dashboard'))->with('status', 'Post Deleted Successfully.');
     }
 }
