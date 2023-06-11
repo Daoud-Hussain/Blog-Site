@@ -26,7 +26,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
     Route::get('/', [HomeController::class, 'show_posts'])->name('home');
-    Route::get('/home', [HomeController::class, 'show_posts'])->name('home');
     
     //Route for creating post
     Route::get('/dashboard', [DashboardController::class, 'show_posts'])->middleware(['auth', 'verified'])->name('dashboard');
