@@ -1,32 +1,19 @@
 <x-app-layout>
     <div class="py-12">
         <h2 class=" text-center mb-4">Blogging Site</h2>
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="container p-2">
-                
-                    <table class="table table-white ">
-                        <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Content</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($posts as $post)
-                            <tr>
-                                <td>{{$post->user->name}}</td>
-                                <td>{{$post->title}}</td>
-                                <td >{{$post->body}}</td>
-                            </tr>
-                           
-                        @endforeach
-                        </tbody>
-                    </table>
+        @foreach ($posts as $post)
+        <div class="container">
+		<div class="card">
+			<div class="card-body">
+                    <h5 class="card-title">{{$post->user->name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{$post->title}}</h6>
+                    <p class="card-text">{{$post->body}}</p>
                 </div>
-
             </div>
         </div>
+        @endforeach
+
+
     </div>
+    
 </x-app-layout>

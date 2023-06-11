@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Blog Site') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -18,14 +18,18 @@
             crossorigin="anonymous">
     </head>
     <style>
+        .card {
+            color: black;
+			margin: 0 auto;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-top: 25px; /* adjust as needed */
+		}
         .theme {
             /* background-color: #311b92; */
             color: #fff;
-            /* background: linear-gradient(to right, #870000, #190a05); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            /* background: #870000; fallback for old browsers */
-  /* background: -webkit-linear-gradient(to bottom, #870000, #190a05); Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #870000, #190a05); 
-            }
+            background: linear-gradient(to right, #870000, #190a05); 
+        }
         
         .form-wrapper {
             max-width: 500px;
