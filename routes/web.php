@@ -20,17 +20,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'show_posts'])->middleware(['auth', 'verified'])->name('dashboard');
-
-//Route for creating post
-Route::get('/post', [PostController::class, 'index'])->name('post_index');
-Route::post('/post', [PostController::class, 'create'])->name('post_create');
-
 
 Route::middleware('auth')->group(function () {
+    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/dashboard', [DashboardController::class, 'show_posts'])->middleware(['auth', 'verified'])->name('dashboard');
+    
+    //Route for creating post
+    Route::get('/post', [PostController::class, 'index'])->name('post_index');
+    Route::post('/post', [PostController::class, 'create'])->name('post_create');
+    Route::get('/post/edit/{id}', [PostController::class, 'edit'])->name('post_edit');
+    Route::put('/post/edit/{id}', [PostController::class, 'update'])->name('post_update');
+
+    
+
 });
 
 

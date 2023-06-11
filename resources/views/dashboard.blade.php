@@ -1,6 +1,11 @@
 <x-app-layout>
     <div class="py-12">
-        <h2 class=" text-center mb-4">Dashboard</h2>
+        <h2 class=" text-center mb-2">Dashboard</h2>
+        @if(session()->has('status'))
+                <h6 class="text-white text-center mb-2">
+                    {{ session('status') }}
+                </h6>
+        @endif
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="container p-2">
@@ -21,8 +26,8 @@
                                 <td>{{$post->title}}</td>
                                 <td >{{$post->body}}</td>
                                 <td>
-                                <button type="button" class="btn btn-primary">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <a href="{{url('/post/edit', $post->id) }}"><button type="button" class="btn btn-primary">Edit</button></a>
+                                <a href="{{url('/post/edit', $post->id)}} "><button type="button" class="btn btn-danger">Delete</button></a>
                                 </td>
                             </tr>
                            
