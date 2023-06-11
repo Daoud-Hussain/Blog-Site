@@ -16,7 +16,12 @@
                 <textarea name="body" class="form-control" id="post-content" rows="6" placeholder="Enter post content"></textarea>
                 </div>
                 <button type="submit" id="button" class="btn " value="Post" >Submit </button>
-            </form>
+            </form> <br>
+            @if(session()->has('status'))
+                <h6 class="text-bold">
+                    {{ session('status') }}
+                </h6>
+            @endif
             </div> 
         </div>
         </div>
