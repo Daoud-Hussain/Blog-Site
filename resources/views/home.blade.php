@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="py-12">
-        <h2 class=" text-center mb-4">Blogging Site</h2>
+        <h2 class=" text-center mb-4">Blog Site</h2>
         @foreach ($posts as $index =>$post)
         <div class="container">
 		<div class="card">
