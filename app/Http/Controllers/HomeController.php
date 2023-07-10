@@ -13,8 +13,9 @@ class HomeController extends Controller
         return view('home', ['posts'=>$posts]);
     }
 
-    public function show_details(){
-        $post = Post::all();
-        return view('details', ['posts'=>$posts]);
+    public function show_details(int $id)
+    {   
+        $post = Post::find($id);
+        return view('details', ['post' => $post]);
     }
 }

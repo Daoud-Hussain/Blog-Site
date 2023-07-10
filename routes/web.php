@@ -35,7 +35,8 @@ Route::middleware('auth')->group(function () {
     Route::put('/post/edit/{id}', [PostController::class, 'update'])->name('post_update');
     Route::get('/post/delete/{id}', [PostController::class, 'destroy'])->name('post_destroy');
     
-    //Route 
+    
+    Route::get('/details/{id}', [HomeController::class , 'show_details'])->name('post_details');
 });
 
 
