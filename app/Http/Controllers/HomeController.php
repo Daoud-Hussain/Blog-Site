@@ -12,4 +12,9 @@ class HomeController extends Controller
         $posts = Post::all();
         return view('home', ['posts'=>$posts]);
     }
+
+    public function show_details(){
+        $post = Post::all();
+        return view('details', ['posts'=>$posts]);
+    }
 }

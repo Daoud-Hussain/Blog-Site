@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/', [HomeController::class, 'show_posts'])->name('home');
     
-    //Route for creating post
+    //Route for managing post
     Route::get('/dashboard', [DashboardController::class, 'show_posts'])->middleware(['auth', 'verified'])->name('dashboard');
     Route::get('/post', [PostController::class, 'index'])->name('post_index');
     Route::post('/post', [PostController::class, 'create'])->name('post_create');
@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/post/edit/{id}', [PostController::class, 'update'])->name('post_update');
     Route::get('/post/delete/{id}', [PostController::class, 'destroy'])->name('post_destroy');
     
+    //Route 
 });
 
 
